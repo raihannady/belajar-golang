@@ -17,12 +17,13 @@ func main() {
 
 	index, err := strconv.Atoi(os.Args[1])
 	if err != nil {
-		fmt.Println("Invalid index:", os.Args[1])
+		fmt.Println("Invalid input:", os.Args[1])
+		fmt.Println("Please enter a number")
 		return
 	}
 
-	if index < 0 || index >= len(students)+1 {
-		fmt.Println("Index out of range.")
+	if index <= 0 || index >= len(students)+1 {
+		fmt.Println("No Student found with no:", index)
 		return
 	}
 
